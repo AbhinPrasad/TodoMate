@@ -1,0 +1,16 @@
+
+// code that's run during page load to check a person's login status:
+FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+
+//response
+{
+    status: 'connected',
+    authResponse: {
+        accessToken: '...',
+        expiresIn:'...',
+        signedRequest:'...',
+        userID:'...'
+    }
+}

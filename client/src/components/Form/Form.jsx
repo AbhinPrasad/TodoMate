@@ -1,7 +1,7 @@
 import React from "react";
 import "./Form.css";
 import { TextField } from "@mui/material";
-import { Button, GitHub, GoogleLogin, Facebook } from "..";
+import { Button, GitHub, GoogleLogin, FacebookLogin } from "..";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -104,8 +104,8 @@ const Form = () => {
 				</p>
 			</div>
 			<div className="social">
-            <GoogleLogin/>
-				<Facebook />
+				<GoogleLogin />
+				<FacebookLogin />
 				<GitHub />
 			</div>
 			<div className="section">

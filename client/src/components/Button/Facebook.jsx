@@ -1,5 +1,8 @@
 import React from "react";
 import { BsFacebook } from "react-icons/bs";
+import { LoginSocialFacebook } from "reactjs-social-login";
+
+const handleFacebookLogin = () => {};
 
 const Facebook = () => {
 	return (
@@ -9,4 +12,15 @@ const Facebook = () => {
 	);
 };
 
-export default Facebook;
+const FacebookLogin = () => {
+	return (
+		<LoginSocialFacebook
+			appId={import.meta.env.VITE_FACEBOOK_APP_ID}
+			onResolve={handleFacebookLogin}
+			onReject={handleFacebookLogin}>
+			<Facebook />
+		</LoginSocialFacebook>
+	);
+};
+
+export default FacebookLogin;
