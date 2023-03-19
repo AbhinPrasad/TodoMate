@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Auth } from "./pages";
+import { Auth,PrivacyPolicy } from "./pages";
 
 function App() {
 	return (
@@ -8,6 +8,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Auth />} />
 				<Route path="/register" element={<Auth />} />
+				<Route path="/privacy-policy" element={<PrivacyPolicy />} />
 			</Routes>
 		</BrowserRouter>
 	);
