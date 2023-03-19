@@ -1,5 +1,5 @@
 .auth_container {
-	background-image: url("../../assets/image3.jpg");
+	background-image: url("../../assets/pexels-darius-krause-2470655.jpg");
 	display: flex;
 	flex-direction: column;
 	/* width: 600px; */
@@ -12,7 +12,7 @@
 	margin: 0;
 	padding: 0;
 	line-height: 50px;
-	color: white;
+	color: black;
 }
 
 .form_text p {
@@ -50,8 +50,8 @@
 }
 
 .social_button {
-	/* background-color: #eaf3f2; */
-	background-color: transparent;
+	background-color: #eaf3f2;
+	/* background-color: transparent; */
 	border: none;
 	border-radius: 10px;
 	cursor: pointer;

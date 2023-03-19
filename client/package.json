@@ -20,6 +20,7 @@
     "react-google-button": "^0.7.2",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.9.0",
+    "reactjs-social-login": "^2.6.2",
     "yup": "^1.0.2"
   },
   "devDependencies": {

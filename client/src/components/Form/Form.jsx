@@ -1,7 +1,7 @@
 import React from "react";
 import "./Form.css";
 import { TextField } from "@mui/material";
-import { Button, GitHub, Google, Facebook } from "..";
+import { Button, GitHub, GoogleLogin, Facebook } from "..";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -74,7 +74,6 @@ const Form = () => {
 	};
 
 	const getValidationSchema = (showExtraFields) => {
-		console.log(showExtraFields);
 		if (showExtraFields) {
 			return registerValidationSchema;
 		} else {
@@ -105,7 +104,7 @@ const Form = () => {
 				</p>
 			</div>
 			<div className="social">
-				<Google />
+            <GoogleLogin/>
 				<Facebook />
 				<GitHub />
 			</div>
