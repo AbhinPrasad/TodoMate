@@ -1,69 +1,74 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700;800&display=swap");
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.auth {
+	display: flex;
+	height: 100vh;
+	width: 100%;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.left {
+	width: 60%;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.right {
+	width: 40%;
+}
+
+
+
+.button {
+	--primary-color: #000;
+	--secondary-color: #fff;
+	--border-color: #000;
+	background-color: var(--primary-color);
+	border: 1px solid var(--border-color);
+	color: var(--secondary-color);
+	padding: 10px 20px;
+	font-size: 18px;
+	font-weight: bold;
+	border-radius: 50px;
+	box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	transition: all 0.3s ease-in-out;
+	width: 300px;
+}
+
+.button::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -100%;
+	left: 50%;
+	width: 150%;
+	height: 150%;
+	background-color: var(--secondary-color);
+	border-radius: 50%;
+	transform: translate(-50%, 0) scale(0);
+	z-index: -1;
+	transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+	transform: translateY(-5px);
+	box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+}
+
+.button:hover::before {
+	transform: translate(-50%, -50%) scale(2);
+}
+
+.button:active {
+	transform: translateY(0);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }

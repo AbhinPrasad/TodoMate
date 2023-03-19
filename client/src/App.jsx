@@ -1,11 +1,16 @@
+import React,{useState,useContext} from "react";
 import "./App.css";
-import Login from "./pages/Login";
+import {BrowserRouter,Route,Routes} from "react-router-dom"
+import {Auth } from "./pages";
 
 function App() {
 	return (
-		<div className="App">
-			<Login />
-		</div>
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<Auth/>}/>
+				<Route path="/register" element={<Auth/>}/>
+			</Routes>
+		</BrowserRouter>
 	);
 }
 

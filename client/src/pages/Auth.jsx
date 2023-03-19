@@ -1,9 +1,9 @@
 import React from "react";
 import { Form } from "../components";
 
-const Register = () => {
+const Auth = () => {
 	return (
-		<div className="register">
+		<div className="auth">
 			<div className="left">
 				<Form />
 			</div>
@@ -12,4 +12,4 @@ const Register = () => {
 	);
 };
 
-export default Register;
+export default Auth;
