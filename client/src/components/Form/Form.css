@@ -92,3 +92,8 @@
 	position: relative;
 	top: 20px;
 }
+
+.formik_error{
+	color: red;
+	font-size:x-small;
+}
