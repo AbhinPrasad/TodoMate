@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbhinPrasad/TodoMate.git"
+  },
+  "author": "AbhinPrasad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbhinPrasad/TodoMate/issues"
+  },
+  "homepage": "https://github.com/AbhinPrasad/TodoMate#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.2",
+    "nodemon": "^2.0.21"
+  }
+}
