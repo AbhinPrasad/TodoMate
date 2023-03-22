@@ -8,3 +8,8 @@ export const googleAuth = async (data) => {
 	const response = await API.post("/google", data);
 	console.log(response);
 };
+
+export const facebookAuth = async(data)=>{
+	const response = await API.post("/facebook",data)
+	console.log(response);
+}

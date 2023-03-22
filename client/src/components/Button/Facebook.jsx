@@ -1,8 +1,12 @@
 import React from "react";
 import { RiFacebookFill } from "react-icons/ri";
 import { LoginSocialFacebook } from "reactjs-social-login";
+import { facebookAuth } from "../../api/authRequest";
 
-const handleFacebookLogin = () => {};
+const handleFacebookLogin = (credentials) => {
+	console.log(credentials);
+	facebookAuth(credentials)
+};
 
 const Facebook = () => {
 	return (
