@@ -1,5 +1,5 @@
 import React from "react";
-import { BsFacebook } from "react-icons/bs";
+import { RiFacebookFill } from "react-icons/ri";
 import { LoginSocialFacebook } from "reactjs-social-login";
 
 const handleFacebookLogin = () => {};
@@ -7,7 +7,12 @@ const handleFacebookLogin = () => {};
 const Facebook = () => {
 	return (
 		<button className="social_button">
-			<BsFacebook style={{ fontSize: "25px", color: "#3b5998" }} />
+			<RiFacebookFill
+				style={{
+					fontSize: "22px",
+					color: "#3b5998"
+				}}
+			/>
 		</button>
 	);
 };

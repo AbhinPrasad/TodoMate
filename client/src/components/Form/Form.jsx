@@ -1,7 +1,7 @@
 import React from "react";
 import "./Form.css";
 import { TextField } from "@mui/material";
-import { Button, GitHub, GoogleLogin, FacebookLogin } from "..";
+import { Button, GitHub, Google, FacebookLogin } from "..";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -104,7 +104,7 @@ const Form = () => {
 				</p>
 			</div>
 			<div className="social">
-				<GoogleLogin />
+				<Google />
 				<FacebookLogin />
 				<GitHub />
 			</div>
@@ -113,6 +113,7 @@ const Form = () => {
 				<div className="text">or</div>
 				<div className="divider-right"></div>
 			</div>
+
 			<div className="form_container">
 				<form
 					className="auth_form"

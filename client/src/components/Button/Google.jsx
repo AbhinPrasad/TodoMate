@@ -1,26 +1,26 @@
 import React from "react";
-import { FcGoogle } from "react-icons/fc";
-import { LoginSocialGoogle } from "reactjs-social-login";
+import { googleAuth } from "../../api/authRequest";
+import { GoogleLogin } from "@react-oauth/google";
+import jwtDecode from "jwt-decode";
 
-const handleGoogleLogin = () => {};
+const GoogleButton = () => {
+	const handleGoogleLogin = (credentialResponse) => {
+		//credential => jwt token which includes user data of the the google account
+		const decoded = jwtDecode(credentialResponse.credential);
+		//API_call
+		googleAuth(decoded)
+	};
 
-const Google = () => {
 	return (
-		<button className="social_button">
-			<FcGoogle style={{ fontSize: "25px" }} />
-		</button>
+		<GoogleLogin
+			onSuccess={handleGoogleLogin}
+			onError={() => {
+				console.log("Login Failed");
+			}}
+			type="icon"
+			shape="circle"
+		/>
 	);
 };
 
-const GoogleLogin = () => {
-	return (
-		<LoginSocialGoogle
-			client_id={import.meta.env.VITE_GOOGLE_CLIENT_ID}
-			onResolve={handleGoogleLogin}
-			onReject={handleGoogleLogin}>
-			<Google />
-		</LoginSocialGoogle>
-	);
-};
-
-export default GoogleLogin;
+export default GoogleButton;

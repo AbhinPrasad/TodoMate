@@ -1,11 +1,17 @@
 .auth_container {
-	background-image: url("../../assets/pexels-darius-krause-2470655.jpg");
+	background-image: url("../../assets/elena-joland-mjeQon0Mh_Q-unsplash.jpg");
+	background-size: cover;
 	display: flex;
 	flex-direction: column;
-	/* width: 600px; */
-	height: 601px;
+	width: inherit;
 	align-items: center;
 	justify-content: center;
+}
+
+.form_text {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
 }
 
 .form_text h1 {
@@ -22,7 +28,7 @@
 
 .form_container {
 	position: relative;
-	top: 20px;
+	top: 38px;
 }
 
 .auth_form {
@@ -43,25 +49,22 @@
 
 .social {
 	position: relative;
-	top: 15px;
+	top: 14px;
 	display: flex;
-	gap: 50px;
 	align-items: center;
+	gap: 10px;
 }
-
 .social_button {
-	background-color: #eaf3f2;
-	/* background-color: transparent; */
-	border: none;
-	border-radius: 10px;
-	cursor: pointer;
-	font-size: 16px;
+	height: 40px;
+	width: 40px;
+	border-radius: 22px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 10px;
-	width: 50px;
-	height: 43px;
+	background-color: #ffffff;
+	border: 1px solid;
+	border-color: #c7c4c4;
+	cursor: pointer;
 }
 
 .social_button:hover {
@@ -88,12 +91,12 @@
 	font-size: smaller;
 }
 
-.link{
+.link {
 	position: relative;
-	top: 20px;
+	top: 30px;
 }
 
-.formik_error{
+.formik_error {
 	color: red;
-	font-size:x-small;
+	font-size: x-small;
 }
