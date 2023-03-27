@@ -4,8 +4,7 @@ import { LoginSocialFacebook } from "reactjs-social-login";
 import { facebookAuth } from "../../api/authRequest";
 
 const handleFacebookLogin = (credentials) => {
-	console.log(credentials);
-	facebookAuth(credentials)
+	facebookAuth(credentials);
 };
 
 const Facebook = () => {

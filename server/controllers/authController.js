@@ -23,21 +23,25 @@ export const googleOAuth = async (req, res) => {
 
 export const facebookOAuth = async (req, res) => {
 	// console.log(req.body);
-	const { name, email } = req.body.data;
-	const profileImg = req.body.data.picture.data.url;
 	try {
-		const userExist = await User.findOne({ email: email });
-		if (userExist) {
-			res.status(400).json("user exists");
+		if (!req.body.data) {
+			res.status(400).json("data not recieved");
 		} else {
-			const user = new User({
-				name: name,
-				email: email,
-				profileImg: profileImg,
-				provider: "facebook"
-			});
-			await user.save();
-			res.status(201).json({ user });
+			const { name, email } = req.body.data;
+			const profileImg = req.body.data.picture.data.url;
+			const userExist = await User.findOne({ email: email });
+			if (userExist) {
+				res.status(400).json("user exists");
+			} else {
+				const user = new User({
+					name: name,
+					email: email,
+					profileImg: profileImg,
+					provider: "facebook"
+				});
+				await user.save();
+				res.status(201).json({ user });
+			}
 		}
 	} catch (err) {
 		console.log(err);

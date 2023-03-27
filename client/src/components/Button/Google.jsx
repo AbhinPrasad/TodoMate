@@ -8,7 +8,7 @@ const GoogleButton = () => {
 		//credential => jwt token which includes user data of the the google account
 		const decoded = jwtDecode(credentialResponse.credential);
 		//API_call
-		googleAuth(decoded)
+		googleAuth(decoded);
 	};
 
 	return (
